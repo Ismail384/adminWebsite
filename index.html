@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <style>
+    /* CSS styles for the layout */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      height: 40px;
+      top: 0;
+      position: sticky;
+    }
+    
+    .navbar-logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    
+    .admin-details {
+      font-size: 16px;
+    }
+
+    .content {
+      display: flex;
+      
+    }
+    .leftbar {
+      background-color: #f4f4f4;
+      width: 200px;
+      padding: 10px;
+      height: calc(100vh - 50px); 
+      flex-shrink: 0;
+    }
+    
+    .leftbar-item {
+      margin: 30px;
+      background-color: greenyellow;
+      padding: 15px;
+    }
+    
+    .leftbar-item a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    
+    .leftbar-item a:hover {
+      background-color: #eaeaea;
+    }
+    
+    .right-sidebar {
+      padding: 10px;
+      height: calc(100vh-50px); 
+      flex: 1;
+    
+    
+    }
+    
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .table th, .table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    /* CSS styles for active item */
+    .active {
+      background-color: #eaeaea;
+    }
+
+    img{
+      height: 50px;
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-logo"><img src="assets/logo.jfif"></div>
+    <div class="admin-details">Admin Name</div>
+  </div>
+
+  <!-- Leftbar -->
+  <div class="content">
+    <div class="leftbar">
+      <div class="leftbar-item"><a href="dashboard.html">Dashboard</a></div>
+      <div class="leftbar-item"><a href="drivers.html">Drivers</a></div>
+      <div class="leftbar-item"><a href="ambulance.html">Ambulances</a></div>
+      <div class="leftbar-item"><a href="customer.html">Customers</a></div>
+      <div class="leftbar-item"><a href="reports.html">Reports</a></div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="right-sidebar">
+      <iframe id="content-iframe" src="dashboard.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+  <!-- Add more Firebase modules if required, e.g., firebase-firestore.js -->
+  
+  <script src="firebase-connection.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>

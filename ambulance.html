@@ -1,0 +1,86 @@
+<style>
+    .ambulance-page{
+        display: flex;
+    }
+
+    .ambualnce-table-data{
+        flex: 3;
+    }
+
+    .form-container {
+        flex: 1;
+    margin-top: 20px;
+  }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    table th, table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    table th {
+      background-color: #f2f2f2;
+    }
+    
+    table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    table tr:hover {
+      background-color: #e6e6e6;
+    }
+    .form-container {
+        flex: 1;
+    margin-top: 20px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container button {
+    margin-top: 10px;
+    display: block;
+  }
+    </style>
+
+<div class="ambulance-page">
+<div class="ambualnce-table-data">
+<h2>Ambulances</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Number Plate</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="ambulance-data-output">
+    
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="form-container">
+    <h3>Add Ambulance</h3>
+    <form id="ambulance-form">
+      <input type="text" id="model-input" placeholder="Model" required>
+      <input type="text" id="numberplate-input" placeholder="Number Plate" required>
+      <button type="submit">Add</button>
+    </form>
+  </div>
+
+
+</div>
+
+ 
+
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+
+<script src="ambulance_script.js"> </script>
+

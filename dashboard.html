@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ambulance Hailing App Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .dashboard-heading {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      width: 200px;
+    }
+
+    .stat-card h3 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .stat-card p {
+      font-size: 18px;
+      color: #666;
+      margin: 10px 0 0;
+    }
+
+    .footer {
+      text-align: center;
+      color: #666;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="dashboard-heading">Ambulance Hailing App Dashboard</h1>
+    <div class="stats-container">
+      <div class="stat-card">
+        <h3>Total Ambulances</h3>
+        <p id="total-ambulance"></p> 
+      </div>
+      <div class="stat-card">
+        <h3>Total Bookings</h3>
+        <p id="total-bookings"></p>
+      </div>
+      <div class="stat-card">
+        <h3>Active Ambulances</h3>
+        <p>8</p>
+      </div>
+      <div class="stat-card">
+        <h3>Completed Bookings</h3>
+        <p>92</p>
+      </div>
+    </div>
+
+    
+    <footer class="footer">
+      &copy; 2023 Ambulance Hailing App
+    </footer>
+  </div>
+
+
+  
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+
+<script src="functions.js"> </script>
+</body>
+</html>
